@@ -1,0 +1,35 @@
+#respContainer{  
+  height: 500px;
+  margin: 0px auto;
+  width: 90%;
+  margin-top: 0px
+}
+
+/* #AnswerCheck {
+  opacity: 0
+} */
+
+#InstructionBtn {
+    width:200px;;
+    height: auto;
+    font-weight: bold;
+    font-size:1.3rem;
+    text-align: center;
+    background-color:#f2f2f2;
+    border: 5px solid grey;
+    border-radius: 100px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 30%;
+    display: block;
+    min-width: 100px;
+    cursor: pointer;
+    margin-top:30px;
+    padding: 15px;
+  }
+
+  Link {
+    text-decoration: none;
+  }
+  

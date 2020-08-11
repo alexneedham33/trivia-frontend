@@ -1,0 +1,166 @@
+
+
+
+#homeDiv {
+  width: 85vw;
+  margin: 0 auto;
+  height: 70vh;
+  position: relative; 
+  /* border: 1px black solid; */
+  top: 10px;
+  background-color: #00ffff;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+#homeBtnCont {
+  height: 15vh;
+  width: 90vw;
+  display: block;
+  text-align: center;
+}
+
+
+#HomeImage {
+  height: 70vh;
+  width: 85vw;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#triviaMainImage {
+  width: 100%;
+  position: relative;
+  border: 3px black solid;
+  top: 30px;
+  height: 97%;
+}
+
+#mexicoImg {
+  background-image: url("mexicanFlag.png");
+  background-size:cover;
+  opacity: 0.7;
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+
+
+#navDiv ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+#navDiv ul li {
+ list-style: none;
+ font-size: 1.3rem;
+ font-weight: bold;
+ z-index:5;
+ text-transform: capitalize;
+ font-weight: bold;
+
+}
+
+#navDiv ul li a {
+  text-decoration: none;
+  
+}
+
+
+h1 {
+  text-align: center;
+}
+
+/* #playLink {
+  text-decoration: none;
+} */
+
+#startButton {
+  text-align: center;
+  width: 20%;
+  height:75px;
+  display: block;
+  font-size: 1.8rem;
+  font-weight:bold;
+  max-width: 400px;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 300px;
+  margin: 0 auto;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 10px;
+
+
+}
+
+#startButton:hover{
+  background: #0b7226;
+  opacity: 0.8;
+}
+
+
+#logo {
+  height: 350px;
+  width: 400px;
+  margin: 30px auto;
+  display: block;
+}
+
+#homeTextContainer{
+  height: auto;
+  width: 65%;
+  border: 1px solid #0b7226;
+  margin-top: 200px;
+  margin: 100px auto;
+  background:white;
+
+
+}
+#homeText {
+  margin: auto 50px;
+  font-size: 1.3rem;
+}
+
+
+#bubbleContainer {
+  display: block;
+  margin: 100px 0px auto auto;
+  height:40%;
+}
+
+#bubbleImg {
+  height: auto;
+  max-height: 300px ;
+  width: 70%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+#title {
+  height:50px;
+  font-size: 3rem;
+  padding-top:20px;
+  color: green;
+}
+
+
+/* #homeHero {
+  width:100%;
+  height:100%;
+  background-image: url("mexicanFlag.png");
+  background-size:cover;
+  background-repeat: no-repeat; 
+   background-position: relative;
+  
+} */
+

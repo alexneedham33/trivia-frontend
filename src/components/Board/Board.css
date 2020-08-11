@@ -1,0 +1,57 @@
+
+
+svg {
+  max-height: 90%;
+  max-width: 90%;
+  display: block;
+  margin: 0px auto;
+  z-index: 5;
+  position: relative;
+  border:3px solid black;
+  border-radius: 33px;
+
+
+}
+
+#boardClickBtn {
+  cursor: pointer;
+}
+
+#bubble {
+  position: relative;
+  bottom: 400px;
+  height: 300px;
+  width: auto;
+  z-index:10;
+  left: 100px;
+}
+
+#svgContainer {
+  top: 30px;
+  width: 100%;
+  height: 75vh;
+  margin: 0px auto;
+  display: block;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

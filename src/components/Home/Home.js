@@ -27,7 +27,7 @@ const Home = () => {
        
       <img id="HomeImage" src={HomeImg} alt="blocks"  />
         {/* <Link id="playLink" to="/Settings"> */}
-          <button id="startButton" onClick={handleClick}>Play Now!</button>
+          <button id="startButton" onClick={handleClick}>Play Now Baby!</button>
         {/* </Link> */}
     </div>
    );

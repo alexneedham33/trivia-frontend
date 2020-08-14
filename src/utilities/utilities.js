@@ -7,6 +7,5 @@ export const getData = () => {
   const responseEnglish = axios.get(
     `${process.env.REACT_APP_API_URL}/${degNumIndex}`
   );
-  console.log("api url", process.env.REACT_APP_API_URL);
   return responseEnglish;
 };

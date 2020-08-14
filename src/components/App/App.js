@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -11,6 +11,13 @@ import Winner from "../Winner/Winner.js";
 import Nav from "../Nav/Nav.js";
 
 function App() {
+  useEffect(() => {
+    if (window.performance) {
+      if (performance.navigation.type == 1) {
+        localStorage.clear();
+      }
+    }
+  })
   return (
     <MainProvider>
       <Route path="/" component={Nav} />

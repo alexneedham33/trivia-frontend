@@ -4,18 +4,22 @@ import { useHistory } from "react-router-dom";
 // import { mainContext } from '../MainProvider/MainProvider';
 
 function MediumBoard(props) {
-
   let numberOfRenders = props.numRenders;
-  console.log("mediumboard>>>1", numberOfRenders);
   const history = useHistory();
-  
- 
-  function boardClick(){
-    props.setNumRenders((numberOfRenders)=>numberOfRenders + 1);
-    console.log("mediumboard>>>2", numberOfRenders);
-    history.push('/Wheel')
+
+  function boardClick() {
+    props.setNumRenders(() => (numberOfRenders++));
+    console.log("medium>>>2", numberOfRenders);
+    localStorage.setItem("numOfRenders", numberOfRenders);
+    history.push("/Wheel");
   }
-  
+
+  useEffect(() => {
+    const getNumRenders = localStorage.getItem("numOfRenders");
+    if (getNumRenders) {
+      props.setNumRenders(getNumRenders);
+    }
+  });
 
   return (
     <svg
@@ -2185,7 +2189,7 @@ function MediumBoard(props) {
         ></path>
         {/* <Link to="/Wheel"> */}
         <g
-          onClick = {boardClick}
+          onClick={boardClick}
           id="boardClickBtn"
           fillOpacity="1"
           strokeDasharray="none"

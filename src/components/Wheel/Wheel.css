@@ -136,6 +136,7 @@ a {
   font-size: 1.2em;
   background-color: whitesmoke;
   margin-bottom: 40px;
+  border: 1px solid grey;
 }
 
 #wheelh1Txt {

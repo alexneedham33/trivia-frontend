@@ -6,9 +6,6 @@
   margin: 0 auto;
   height: 70vh;
   position: relative; 
-  /* border: 1px black solid; */
-  /* top: 10px; */
-  background-color: #00ffff;
   display: block;
   margin: 0 auto;
 }
@@ -90,8 +87,8 @@ h1 {
   z-index: 5;
   cursor: pointer;
   border-radius: 10px;
-
-
+  background-color:#f2f2f2;
+  border: 2px solid black;
 }
 
 #startButton:hover{

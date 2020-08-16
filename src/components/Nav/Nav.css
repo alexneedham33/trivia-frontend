@@ -6,8 +6,8 @@
   display: block;
   margin:0 auto;
   width: 90vw;
-  background-color: #00ffff;
-  height: 120px;
+  background-color: lightcyan;
+  /* height: 10vh; */
   font-style: italic;
   font-size: 1.2em;
   /* border: 1.5px black solid; */

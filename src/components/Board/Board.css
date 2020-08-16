@@ -27,8 +27,10 @@
   padding:15px 15px;
   font-weight: bold;
   border-radius: 10px;
-  border: 1px black solid;
+  border: 2px black solid;
   font-size: 1.1em;
+  background-color:#f2f2f2;
+  
 }
 
 
@@ -42,7 +44,7 @@
 }
 
 #svgContainer {
-  top: 20px;
+  top: 30px;
   width: 100%;
   height: 70vh;
   margin: 0px auto;

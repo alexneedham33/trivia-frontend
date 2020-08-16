@@ -1,7 +1,7 @@
-*{
+* {
   /* box-sizing: border-box; */
   margin: 0px;
-  padding:0px;
+  padding: 0px;
 }
 
 html {
@@ -10,24 +10,23 @@ html {
 }
 
 body {
-  height:100%;
+  height: 100%;
 
   /* background-color: rgb(215, 221, 221); */
-
 }
 
 #root {
-  height:97%;
+  height:90vh;
   width: 90%;
   display: block;
   margin: 0 auto;
   position: relative;
-  background-color: #00ffff;
-  top:10px;
+  background-color: lightcyan;
+  top: 10px;
   position: relative;
-  border:1px black solid;
+  border: 1px black solid;
   z-index: 10;
-  
+  /* padding-bottom: 30px; */
 }
 
 .App {
@@ -70,7 +69,7 @@ body {
 }
 
 #mainContainer {
-  height: 750px
+  height: 750px;
 }
 
 #boxContainer {
@@ -78,26 +77,24 @@ body {
   justify-content: center;
   align-items: center;
   width: 50%;
-  height:90%;
+  height: 90%;
   margin: auto auto;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  border:1px black dotted
+  border: 1px black dotted;
 }
 
 .box {
   border: 1px solid green;
   height: auto;
   flex-grow: 1;
-  width: 100%
+  width: 100%;
 }
 
 .activeBox {
   background-color: red;
 }
 
-
 #answers {
-  display: block
-  
+  display: block;
 }

@@ -10,6 +10,7 @@ const Home = () => {
 
   const history = useHistory();
   const [isDesktop, setDesktop] = useState(window.innerWidth<850);
+  const tester = 'hello';
 
   function handleClick(){
     history.push('/Board')

@@ -126,6 +126,18 @@ a {
 
 }
 
+#selectTxt {
+  /* border: 1px solid black; */
+  padding: 20px 20px;
+  margin-bottom: 200px;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.2em;
+  background-color: whitesmoke;
+  margin-bottom: 40px;
+}
+
 #wheelh1Txt {
   font-weight: normal;
   font-size: 1.5em;

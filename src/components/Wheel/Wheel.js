@@ -27,6 +27,7 @@ function Wheel({item}) {
 
   return (
     <div id="wheelContainer">
+      <h1 id="selectTxt">SELECT A CATEGORY BELOW.</h1>
       <button id="spinBtn" onClick={toggleAnimation}>
         CLICK TO SPIN!
       </button>

@@ -22,13 +22,13 @@
   left: 65%;
   top: 75%;
   z-index: 11;
-  height:50px;
+  height:auto;
   width:auto;
   padding:15px 15px;
   font-weight: bold;
   border-radius: 10px;
   border: 2px black solid;
-  font-size: 1.1em;
+  font-size: 0.9em;
   background-color:#f2f2f2;
   
 }
@@ -40,7 +40,7 @@
   height: 200px;
   width: 300px;
   z-index:10;
-  top:230px;
+  top:200px;
 }
 
 #svgContainer {

@@ -44,9 +44,9 @@ nav li {
   text-decoration: underline;
 }
 
-/* nav li a {
+nav li a {
   color: black
-} */
+}
 
 nav li a:hover {
   color: lightcoral

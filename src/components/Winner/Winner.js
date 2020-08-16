@@ -1,13 +1,16 @@
 import React, {useContext} from 'react';
 import { mainContext } from '../MainProvider/MainProvider';
 import { useHistory } from "react-router-dom";
+import './Winner.css';
 
 function Winner() {
 
   const context = useContext(mainContext);
   const history = useHistory();
-  const [correctAnswerCount, setCorrectAnswerCount] = context;
-  
+  const [correctAnswerCount, setCorrectAnswerCount] = context[0];
+  console.log('Hello winner');
+
+
   function reset(){
     setCorrectAnswerCount(0);
     history.push('/Board');
@@ -16,8 +19,10 @@ function Winner() {
 
   return (
     <div>
-      <h1>CONGRATULATIONS, YOU WIN!</h1>
-      <button onClick={reset}>Play Again?</button>
+      <div id="congratsTxt">
+        <h1>CONGRATULATIONS, YOU WIN!</h1>
+      </div>
+      <button id="winnerBtn" onClick={reset}>Play Again?</button>
     </div>
   )
 }

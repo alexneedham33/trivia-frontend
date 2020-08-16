@@ -1,37 +1,42 @@
-import React, { useEffect } from "react";
-// import { Link, useContext } from 'react-router-dom';
+import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
-// import { mainContext } from '../MainProvider/MainProvider';
+import { mainContext } from '../MainProvider/MainProvider';
 
 function MediumBoard(props) {
-  let numberOfRenders = props.numRenders;
+
+  // const context = useContext(mainContext);
+  // const [attempts, setAttempts] = context[1]
+  // console.log(attempts);
+  // let numberOfRenders = props.numRenders;
   const history = useHistory();
 
-  function boardClick() {
-    props.setNumRenders(() => (numberOfRenders++));
-    console.log("medium>>>2", numberOfRenders);
-    localStorage.setItem("numOfRenders", numberOfRenders);
-    history.push("/Wheel");
-  }
+  // function boardClick() {
+  //   setAttempts((attempts)=>attempts+1);
+  //   // props.setNumRenders(() => (numberOfRenders++));
+  //   // console.log("medium>>>2", numberOfRenders);
+  //   // localStorage.setItem("numOfRenders", numberOfRenders);
+  //   history.push("/Wheel");
+  // }
 
-  useEffect(() => {
-    const getNumRenders = localStorage.getItem("numOfRenders");
-    if (getNumRenders) {
-      props.setNumRenders(getNumRenders);
-    }
-  });
+  // useEffect(() => {
+  //   const getNumRenders = localStorage.getItem("numOfRenders");
+  //   if (getNumRenders) {
+  //     props.setNumRenders(getNumRenders);
+  //   }
+  // });
+  // 220.011
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsOsb="http://www.openswatchbook.org/uri/2009/osb"
-      id="svg8"
+      xmlnsosb="http://www.openswatchbook.org/uri/2009/osb"
+      id="boardSvg"
       version="1.1"
       viewBox="0 0 220.011 125.006"
       preserveAspectRatio="none"
     >
       <defs id="defs2">
-        <linearGradient id="linearGradient3368" osbPaint="solid">
+        <linearGradient id="linearGradient3368" osbpaint="solid">
           <stop
             id="stop3366"
             offset="0"
@@ -93,7 +98,7 @@ function MediumBoard(props) {
             strokeLinejoin="round"
             strokeOpacity="1"
             strokeWidth="0.2"
-            clip-path="none"
+            clipPath="none"
             opacity="0.743"
             paintOrder="markers fill stroke"
             rx="0"
@@ -114,7 +119,7 @@ function MediumBoard(props) {
             strokeLinejoin="round"
             strokeOpacity="1"
             strokeWidth="0.2"
-            clip-path="none"
+            clipPath="none"
             opacity="0.743"
             paintOrder="markers fill stroke"
             rx="0"
@@ -582,7 +587,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.15095 0 0 6.6393 205.112 -1370.145)"
@@ -601,7 +606,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.15095 0 0 6.6393 200.098 -1368.616)"
@@ -620,7 +625,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.15095 0 0 6.6393 200.098 -1368.616)"
@@ -639,7 +644,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 54.975 -212.432)"
@@ -658,7 +663,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(2.81079 0 0 4.10308 562.7 -904.203)"
@@ -677,7 +682,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.38523 0 0 3.9001 636.558 -856.191)"
@@ -696,7 +701,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.38523 0 0 3.9001 636.558 -856.191)"
@@ -715,7 +720,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 41.613 -237.225)"
@@ -734,7 +739,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 69.272 -219.22)"
@@ -753,7 +758,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 69.272 -219.22)"
@@ -772,7 +777,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(5.03096 0 0 5.82328 384.236 -1183.31)"
@@ -791,7 +796,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.08348 0 0 2.48897 3.022 -372.688)"
@@ -810,7 +815,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(2.84761 0 0 3.53941 171.065 -571.456)"
@@ -829,7 +834,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.67447 0 0 4.16112 270.877 -708.074)"
@@ -848,7 +853,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(5.11973 0 0 9.4579 723.34 -2284.414)"
@@ -867,7 +872,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.38523 0 0 3.9001 636.558 -856.191)"
@@ -886,7 +891,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -905,7 +910,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -924,7 +929,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 41.613 -237.225)"
@@ -943,7 +948,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -962,7 +967,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -981,7 +986,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1000,7 +1005,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.536 0 0 1.64856 59.801 -146.969)"
@@ -1019,7 +1024,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1038,7 +1043,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1057,7 +1062,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1076,7 +1081,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1095,7 +1100,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1114,7 +1119,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1133,7 +1138,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1152,7 +1157,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1171,7 +1176,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1190,7 +1195,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1209,7 +1214,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1228,7 +1233,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.51144 0 0 1.92316 57.38 -213.023)"
@@ -1247,7 +1252,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(.86047 0 0 1.13776 -23.835 -13.787)"
@@ -1266,7 +1271,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(1.24008 0 0 2.59809 22.877 -383.34)"
@@ -1285,7 +1290,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.38523 0 0 3.9001 636.558 -856.191)"
@@ -1304,7 +1309,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
           ></path>
@@ -1322,7 +1327,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0"
             d="M-134.448 222.776H-92.99600000000001V247.75300000000001H-134.448z"
-            clip-path="url(#clipPath4099)"
+            clipPath="url(#clipPath4099)"
             filter="url(#filter3316)"
             paintOrder="markers fill stroke"
             transform="matrix(3.38523 0 0 3.9001 636.558 -856.191)"
@@ -1705,7 +1710,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -158.017 197.659)"
@@ -1724,7 +1729,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -154.81 198.102)"
@@ -1743,7 +1748,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -158.685 195.15)"
@@ -1762,7 +1767,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.50894 0 0 1.04209 -186.948 176.03)"
@@ -1781,7 +1786,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.50894 0 0 1.04209 -187.405 142.971)"
@@ -1800,7 +1805,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.50894 0 0 1.04209 -191.67 176.341)"
@@ -1819,7 +1824,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.56352 0 0 1.0272 53.48 -10.503)"
@@ -1838,7 +1843,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.50894 0 0 1.04209 -186.948 176.03)"
@@ -1857,7 +1862,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.50894 0 0 1.04209 -186.948 176.03)"
@@ -1876,7 +1881,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -145.724 201.496)"
@@ -1895,7 +1900,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -145.724 201.496)"
@@ -1914,7 +1919,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="translate(181.66 -15.562)"
@@ -1933,7 +1938,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -145.724 201.496)"
@@ -1952,7 +1957,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -153.073 201.053)"
@@ -1971,7 +1976,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -158.685 201.2)"
@@ -1990,7 +1995,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.84119 0 0 .90752 -211.841 191.703)"
@@ -2009,7 +2014,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(-.25312 0 0 .39518 -94.874 209.783)"
@@ -2028,7 +2033,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="matrix(.44648 0 0 .4931 -145.724 201.496)"
@@ -2047,7 +2052,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
             transform="translate(181.66 -15.562)"
@@ -2066,7 +2071,7 @@ function MediumBoard(props) {
             strokeOpacity="1"
             strokeWidth="0.442"
             d="M0.983 29.779H139.918V125.02H0.983z"
-            clip-path="url(#clipPath6739)"
+            clipPath="url(#clipPath6739)"
             opacity="0.588"
             paintOrder="markers fill stroke"
           ></path>
@@ -2188,7 +2193,7 @@ function MediumBoard(props) {
           transform="matrix(.51735 0 0 .46724 19.507 1.273)"
         ></path>
         {/* <Link to="/Wheel"> */}
-        <g
+        {/* <g
           onClick={boardClick}
           id="boardClickBtn"
           fillOpacity="1"
@@ -2246,7 +2251,7 @@ function MediumBoard(props) {
               Click Here!
             </tspan>
           </text>
-        </g>
+        </g> */}
         {/* </Link> */}
         <path
           id="path1989"
@@ -2258,7 +2263,7 @@ function MediumBoard(props) {
           strokeOpacity="1"
           strokeWidth="0.2"
           d="M89.486 32.976c-.862 2.884-1.252 5.94-.836 8.922.331 2.375 1.19 4.705 2.671 6.592 1.481 1.886 3.61 3.304 5.971 3.723 1.564.278 3.167.122 4.75.008 1.584-.113 3.207-.178 4.73.271 1.966.58 3.6 1.977 4.898 3.565 1.298 1.587 2.312 3.383 3.465 5.078 1.152 1.693 2.475 3.317 4.189 4.437.857.56 1.806.987 2.807 1.201 1.001.214 2.055.212 3.041-.062 1.792-.498 3.263-1.875 4.13-3.521.866-1.647 1.175-3.54 1.167-5.4-.008-2.107-.403-4.19-.633-6.284-.23-2.094-.289-4.257.354-6.262a9.336 9.336 0 013.07-4.434 9.351 9.351 0 015.016-1.979c1.112-.09 2.23.02 3.345 0 3.63-.064 7.23-1.577 9.758-4.182 2.93-3.019 4.316-7.382 3.997-11.578-.32-4.195-2.26-8.19-5.112-11.283-3.466-3.757-8.226-6.207-13.225-7.279-4.998-1.071-10.225-.813-15.212.309-10.313 2.32-19.708 8.391-26.207 16.728-2.675 3.43-4.888 7.263-6.134 11.43z"
-          clip-path="url(#clipPath2231)"
+          clipPath="url(#clipPath2231)"
           filter="url(#filter3893)"
           opacity="0.463"
           transform="matrix(1.72102 0 0 1.23705 -24.795 -2.555)"
@@ -2622,7 +2627,7 @@ function MediumBoard(props) {
           strokeOpacity="0.883"
           strokeWidth="0.2"
           d="M.516 57.3c3.425-.263 6.938 1.076 9.32 3.55 2.38 2.476 3.584 6.038 3.19 9.45-.192 1.664-.738 3.266-1.025 4.916-.144.825-.222 1.666-.157 2.501.066.835.28 1.666.692 2.395.496.877 1.266 1.58 2.132 2.094.866.515 1.828.852 2.803 1.104 1.951.504 3.997.69 5.858 1.462 2.346.975 4.272 2.872 5.396 5.152.499 1.01.845 2.088 1.298 3.12.453 1.032 1.03 2.04 1.891 2.767 1.152.972 2.715 1.35 4.222 1.322 1.507-.027 2.98-.424 4.427-.848 1.446-.424 2.895-.88 4.395-1.03 1.5-.15 3.078.03 4.372.801.831.496 1.51 1.213 2.089 1.988.578.776 1.065 1.615 1.59 2.427 5.435 8.412 15.048 13.8 25.02 14.718 2.937.27 5.899.182 8.831.49 3.444.363 6.904 1.311 9.717 3.331 1.406 1.01 2.634 2.282 3.522 3.769.888 1.486 1.43 3.19 1.479 4.92.054 1.871-.47 3.744-1.42 5.357-.949 1.613-2.313 2.969-3.891 3.976-3.155 2.014-7.072 2.598-10.795 2.207-7.446-.782-13.965-5.123-20.934-7.86-8.772-3.447-18.664-4.339-27.718-1.717-7.572 2.192-14.367 6.725-22.074 8.383-3.853.828-7.954.895-11.662-.44-1.854-.668-3.592-1.683-5.027-3.033-1.435-1.35-2.563-3.04-3.183-4.91-.343-1.037-.529-2.117-.736-3.19-.88-4.557-2.158-9.027-3.434-13.49-2.426-8.489-4.876-17.202-4.17-26.002.303-3.768 1.185-7.477 2.453-11.038A52.375 52.375 0 01.517 57.299z"
-          clip-path="url(#clipPath3833)"
+          clipPath="url(#clipPath3833)"
           filter="url(#filter3841)"
           opacity="0.257"
           transform="matrix(1.12468 0 0 1.25319 .926 -35.097)"

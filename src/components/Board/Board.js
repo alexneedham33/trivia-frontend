@@ -13,9 +13,18 @@ function Board() {
   const history = useHistory();
   const context = useContext(mainContext);
   const [correctAnswerCount, setCorrectAnswerCount] = context[0];
-  const [numberOfRenders, setNumberOfRenders] = useState(0);
+  const [attempts, setAttempts] = context[1]
 
+  // const [numberOfRenders, setNumberOfRenders] = useState(0);
   const [isDesktop, setDesktop] = useState(window.innerWidth<850);
+
+  function boardClick() {
+    setAttempts((attempts)=>attempts+1);
+    // props.setNumRenders(() => (numberOfRenders++));
+    // console.log("medium>>>2", numberOfRenders);
+    // localStorage.setItem("numOfRenders", numberOfRenders);
+    history.push("/Wheel");
+  }
 
   const updateMedia = () => {
     if (window.innerWidth<850){
@@ -46,7 +55,11 @@ function Board() {
   
   return (
     <div id="svgContainer">
-       {isDesktop ? <SmallBoard numRenders={numberOfRenders} setNumRenders={setNumberOfRenders}/> : <MediumBoard numRenders={numberOfRenders} setNumRenders={setNumberOfRenders}/>}
+        <button id="boardButton" onClick={boardClick}>CLICK HERE!</button>
+        {attempts===0 && <img id="bubble" src={Bubble} alt="motivational text" /> }
+        {isDesktop ? <SmallBoard /> : <MediumBoard />}
+        
+       {/* <div id="testDiv"></div> */}
     </div>
   );
 };

@@ -17,6 +17,7 @@
   word-wrap: break-word;
   font-size: 1rem;
   box-shadow: 0 5px 30px rgba(0,0,0,.30);
+  pointer-events: none;
   
 }
 
@@ -35,49 +36,79 @@ Link {
   margin: 0 auto;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   padding: 10px;
-
+  color: darkgreen;
 
 }
 
+#questionButton:hover {
+  background-color: lightcoral;
+}
 
+
+a {
+  text-decoration: none;
+}
+
+/* -webkit-animation: instruction-slide 0.3s var(--dur) linear;
+  -moz-animation: instruction-slide 0.3s var(--dur) linear;
+  -o-animation: instruction-slide 0.3s var(--dur) linear; */
 .instructionSlide {
-  animation: instruction-slide 0.3s var(--dur) linear;
-  animation-fill-mode: forwards;
-  
+  -webkit-animation: instruction-slide 0.3s var(--dur) linear;
+          animation: instruction-slide 0.3s var(--dur) linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
+
+
 
 #svgWheel {
+  border:3px solid black;
+  border-radius: 33px;
+  width: 95%;
   z-index: -1;
   position: relative;
   max-width: 500px;
   max-height: 500px;
   animation-name: blur-img;
+  display: block;
+  margin: 0px auto;
   
 
 }
 
-#spinBtn {
-  width:250px;;
-  height: 80px;
-  font-weight: bold;
-  font-size:1.1rem;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color:#f2f2f2;
-  border: 5px solid grey;
-  border-radius: 100px;
-  animation: pulse 2.5s linear infinite; 
-  position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  bottom: 30%;
-  display: block;
-  min-width: 100px;
-  cursor: pointer;
-}
+ /* -webkit-animation: pulse 2.5s linear infinite; 
+  -moz-animation: pulse 2.5s linear infinite; 
+  -o-animation: pulse 2.5s linear infinite;  */
+  #spinBtn {
+    -webkit-animation: pulse 2.5s linear infinite;
+            animation: pulse 2.5s linear infinite; 
+    width:250px;;
+    height: 80px;
+    font-weight: bold;
+    font-size:1.1rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#f2f2f2;
+    border: 5px solid grey;
+    border-radius: 100px;
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 33%;
+    display: block;
+    min-width: 100px;
+    cursor: pointer;
+  }
+
+  #spinBtn:hover {
+    background-color: lightcoral;
+  }
+
 
 
 #wheelContainer {
@@ -90,53 +121,115 @@ Link {
   margin: 60px auto; 
   position: relative;
   display: block;
+  bottom: 20px;
 
 }
 
 #wheelh1Txt {
   font-weight: normal;
+  font-size: 1.5em;
 }
 
 
 
 #arrow{
-  animation: arrow-spin var(--playState) var(--dur)  cubic-bezier(0.05,0.6,0.3,1);     
-  transform-origin: bottom;
+  -webkit-animation: arrow-spin var(--playState) var(--dur)  cubic-bezier(0.05,0.6,0.3,1);
+          animation: arrow-spin var(--playState) var(--dur)  cubic-bezier(0.05,0.6,0.3,1);     
+  -webkit-transform-origin: bottom;     
+      -ms-transform-origin: bottom;     
+          transform-origin: bottom;
   transform-box: fill-box;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
    
 }
 
-@keyframes pulse{
+@-webkit-keyframes pulse{
   0%{
-    box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 0 rgba(255,109,74,0.7);
+    -webkit-box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 0 rgba(255,109,74,0.7);
+            box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 0 rgba(255,109,74,0.7);
   }
   40%{
-    box-shadow: 0 0 0 30px rgba(255,109,74,0), 0 0 0 0px rgba(255,109,74,0.7);
+    -webkit-box-shadow: 0 0 0 30px rgba(255,109,74,0), 0 0 0 0px rgba(255,109,74,0.7);
+            box-shadow: 0 0 0 30px rgba(255,109,74,0), 0 0 0 0px rgba(255,109,74,0.7);
   }
   
   80%{
-    box-shadow: 0 0 0 30px rgba(255,109,74,0),0 0 0 30px rgba(255,109,74,0);
+    -webkit-box-shadow: 0 0 0 30px rgba(255,109,74,0),0 0 0 30px rgba(255,109,74,0);
+            box-shadow: 0 0 0 30px rgba(255,109,74,0),0 0 0 30px rgba(255,109,74,0);
   }
   100%{
-    box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 30px rgba(255,109,74,0);
+    -webkit-box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 30px rgba(255,109,74,0);
+            box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 30px rgba(255,109,74,0);
+  }
+  
+}
+@keyframes pulse{
+  0%{
+    -webkit-box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 0 rgba(255,109,74,0.7);
+            box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 0 rgba(255,109,74,0.7);
+  }
+  40%{
+    -webkit-box-shadow: 0 0 0 30px rgba(255,109,74,0), 0 0 0 0px rgba(255,109,74,0.7);
+            box-shadow: 0 0 0 30px rgba(255,109,74,0), 0 0 0 0px rgba(255,109,74,0.7);
+  }
+  
+  80%{
+    -webkit-box-shadow: 0 0 0 30px rgba(255,109,74,0),0 0 0 30px rgba(255,109,74,0);
+            box-shadow: 0 0 0 30px rgba(255,109,74,0),0 0 0 30px rgba(255,109,74,0);
+  }
+  100%{
+    -webkit-box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 30px rgba(255,109,74,0);
+            box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 30px rgba(255,109,74,0);
   }
   
 }
 
 
-
-@keyframes arrow-spin {
+@-webkit-keyframes arrow-spin {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(var(--deg));
-
+    -webkit-transform: rotate(var(--deg));
+            transform: rotate(var(--deg));
+  }
+}
+@keyframes arrow-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(var(--deg));
+            transform: rotate(var(--deg));
   }
 }
 
 
+@-webkit-keyframes instruction-slide {
+  0% {
+    opacity:0;
+    border-radius: 0px;
+    height: 50px;
+    width:0%;
+  }
+  50% {
+    opacity: 0.5;
+    height: 75px;
+    width:40%;
+  
+  }
+  100% {
+    opacity: 1;
+    border-radius: 30px;
+    height: auto;
+    width:70%;
+    pointer-events: all;
+    
+  }
+}
 @keyframes instruction-slide {
   0% {
     opacity:0;
@@ -155,13 +248,29 @@ Link {
     border-radius: 30px;
     height: auto;
     width:70%;
+    pointer-events: all;
     
   }
 }
 
 
+@media only screen and (min-width: 1100px) {
+  #spinBtn {
+    bottom: 30%;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  #spinBtn {
+    bottom: 40%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #spinBtn {
+    bottom: 45%;
 
+  }
+}
 
 
 

@@ -7,17 +7,95 @@
   margin:0 auto;
   width: 90vw;
   background-color: #00ffff;
-  height: 150px;
-  cursor: pointer;
+  height: 120px;
+  font-style: italic;
+  font-size: 1.2em;
   /* border: 1.5px black solid; */
 }
 
-#navDiv img {
+/* #navDiv img { */
   /* height: 150px; */
-  width: 100%;
+  /* width: 100%;
   display: block;
   margin:0 auto;
   position: relative;
-  height: 100%;
+  height: 100%; */
   
+/* } */
+
+nav {
+  height: 100px;
+  background-color: lightblue;
+  border-bottom: 1px solid black;
 }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  font-weight: bold;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  text-decoration: underline;
+}
+
+/* nav li a {
+  color: black
+} */
+
+nav li a:hover {
+  color: lightcoral
+}
+
+nav li button {
+  font-weight: bold;
+  cursor: pointer
+}
+
+
+
+/* #audioDiv {
+  height: 50px;
+  width: 80px;
+  border: 1px solid red;
+} */
+
+
+
+#audioOn, #audioOff {
+  height: 25px;
+  width: auto;
+  border: 1px solid black;
+  padding: 5px 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#audioOn:hover, #audioOff:hover {
+  background: lightcoral;
+}
+
+/* 
+@media only screen and (max-width: 900px) {
+  #navDiv {
+    height: 125px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  #navDiv {
+    height: 175px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  #navDiv {
+    height: 100px;
+  }
+} */

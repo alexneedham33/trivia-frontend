@@ -1,34 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
 import './Home.css';
-// import bubbleText from './trivia-speechbubble.png';
-// import triviaHomeImage from './TriviaHomepage.png';
-import HomeImg from './HomeImg.png';
+import HomeImgWide from './HomeImgWide.png';
+import HomeImgSmall from './HomeImgSmall.png';
 import { useHistory } from "react-router-dom";
 
-// import Nav from '../Nav/Nav';
 
 
 const Home = () => {
 
   const history = useHistory();
+  const [isDesktop, setDesktop] = useState(window.innerWidth<850);
 
   function handleClick(){
     history.push('/Board')
   }
+
+  const updateMedia = () => {
+    if (window.innerWidth<850){
+      setDesktop(true)
+    } else {
+      setDesktop(false)
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  },[]);
+
+  
+  
   return ( 
     <div id="homeDiv">
-      {/* <Nav /> */}
-      {/* <img id="triviaMainImage" src={triviaHomeImage} alt="home page"/> */}
-      {/* <h1 id="title">Puebleando Ando</h1>
-      <div id="bubbleContainer">
-        <img id="bubbleImg" src={bubbleText} alt="bubble" />
-      </div> */}
-       
-      <img id="HomeImage" src={HomeImg} alt="blocks"  />
-        {/* <Link id="playLink" to="/Settings"> */}
-          <button id="startButton" onClick={handleClick}>Play Now Baby!</button>
-        {/* </Link> */}
+     {isDesktop ? <img id="HomeImageSmall" src={HomeImgSmall} alt="blocks"  /> : <img id="HomeImageWide" src={HomeImgWide} alt="blocks"  /> }
+      <button id="startButton" onClick={handleClick}> Play Now! </button>
     </div>
    );
 }

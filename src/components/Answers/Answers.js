@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { mainContext } from '../MainProvider/MainProvider';
-import { useHistory, Link } from "react-router-dom";
 import './Answers.css';
 import '../Main/Main.css';
 
@@ -10,7 +9,6 @@ function Answers(props) {
  const context = useContext(mainContext);
  const [correctAnswerCount, setCorrectAnswerCount] = context[0];
  const [selectedAnswer, setSelectedAnswer] = useState('')
- const history = useHistory();
  console.log(props.correctAnswer);
 
  // random assignment of answer index prop to position for render
@@ -44,11 +42,9 @@ function handleAnswerChange(e){
 }
 
 
-  return (
-      // <form id="answerForm" onSubmit={submitHandler}>
-        
-            //{/* <label><span className="answerLetter">A: </span>{answerA}</label> */}
+    return (
           <div id="answerContainer">
+            {console.log(correctAnswerCount)}
             <div id="responseButtons">
             <button className="responseButton"  value={answerA} name= "answer" onClick={handleAnswerChange}>
                A: {answerA}
@@ -64,12 +60,6 @@ function handleAnswerChange(e){
             </button>
             </div>
              <button id="submitButton" name= "answer" onClick={submitHandler} >SUBMIT</button>
-             {/* <div id="AnswerCheck">
-               {props.correctAnswer===selectedAnswer ? 'That is correct' : 'That is false'}
-               <Link to="/Board">
-               <button id="InstructionBtn">Click Next</button>
-               </Link>
-             </div> */}
           </div>
 
   )

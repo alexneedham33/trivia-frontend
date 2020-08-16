@@ -1,0 +1,39 @@
+
+#congratsTxt {
+  border: 2px solid black;
+  background-color: green;
+  box-shadow: darkgreen;
+  height: 150px;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  color: white;
+  opacity: 0.9;
+  border-radius: 20px;
+}
+
+#congratsTxt h1{
+  width: 85%;
+}
+
+#winnerBtn {
+  display: block;
+  height: 80px;
+  width: 30vw;
+  padding: 20px 20px;
+  margin: 70px auto;
+  position: relative;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#winnerBtn:hover, #winnerBtn:focus {
+background: lightcoral;
+}

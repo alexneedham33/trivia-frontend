@@ -1,0 +1,35 @@
+
+#contactMainDiv {
+  height: 80%;
+  position: relative;
+  font-size: 1em;
+  display: flex;
+  flex-direction:  column;
+  justify-content: space-between;
+ 
+}
+
+#contactInnerDiv {
+  padding-top: 30px;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+#contactInnerDiv ul {
+ list-style: none;
+}
+
+#contactInnerDiv ul li {
+  margin-top: 20px;
+  padding-bottom: 40px;
+ }
+
+ #copyRightText {
+   font-size: 0.8em;
+   margin-left: 20px;
+   font-style: italic;
+   
+ }

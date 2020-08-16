@@ -3,18 +3,13 @@ import Question from '../Question/Question';
 import Answers from '../Answers/Answers';
 import './Main.css';
 import { mainContext } from '../MainProvider/MainProvider';
-import axios from "axios";
 import { getData } from '../../utilities/utilities';
 import { Link } from 'react-router-dom';
 import '../Answers/Answers.css'
 
 function Main(props) {
 
-const context = useContext(mainContext);
-console.log(context);
-console.log(props);
-
-
+//Setting local state
 const [question, setQuestion] = useState('');
 const [answers, setAnswers] = useState([]);
 const [correctanswer, setCorrectAnswer] = useState('');

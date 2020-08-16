@@ -1,25 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
 // import { Link, useContext } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-// import { mainContext } from '../MainProvider/MainProvider';
+import { mainContext } from '../MainProvider/MainProvider';
 
 function SmallBoard(props) {
-  let numberOfRenders = props.numRenders;
+
+  // const context = useContext(mainContext);
+  // const [attempts, setAttempts] = context[1]
+  // console.log(attempts);
+  // let numberOfRenders = props.numRenders;
   const history = useHistory();
 
-  function boardClick() {
-    props.setNumRenders(() => (numberOfRenders += 1));
-    console.log("smallboard>>>2", numberOfRenders);
-    history.push("/Wheel");
-  }
+  // function boardClick() {
+  //   setAttempts((attempts)=>attempts+1);
+  //   // props.setNumRenders(() => (numberOfRenders += 1));
+  //   // console.log("smallboard>>>2", numberOfRenders);
+  //   history.push("/Wheel");
+  // }
+
+  // 150.007 125.006
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsosb="http://www.openswatchbook.org/uri/2009/osb"
-      id="svg8"
+      id="boardSvg"
       version="1.1"
-      viewBox="0 0 150.007 125.006"
+      viewBox="0 0 150.007 125"
+      preserveAspectRatio="none"
     >
       <defs id="defs2">
         <linearGradient id="linearGradient3368" osbpaint="solid">
@@ -2179,7 +2187,7 @@ function SmallBoard(props) {
           transform="matrix(.51735 0 0 .46724 19.507 1.273)"
         ></path>
         {/* <Link to="/Wheel"> */}
-        <g id="boardClickBtn" onClick={boardClick}>
+        {/* <g id="boardClickBtn" onClick={boardClick}>
           <rect
             style={{ mixBlendMode: "normal" }}
             id="rect2996"
@@ -2236,7 +2244,7 @@ function SmallBoard(props) {
               Click Here!
             </tspan>
           </text>
-        </g>
+        </g> */}
         {/* </Link> */}
         <path
           id="path1989"

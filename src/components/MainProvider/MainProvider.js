@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 export const mainContext = createContext();
 
@@ -9,7 +9,8 @@ function MainProvider(props) {
 
 
   console.log("does this keep rendering?");
-  console.log(correctAnswerCount)
+  // console.log(correctAnswerCount)
+  console.log(attempts);
 
   const stateOptions = [
     [correctAnswerCount, setCorrectAnswerCount],

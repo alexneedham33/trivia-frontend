@@ -4,7 +4,7 @@
 #homeDiv {
   width: 100%;
   margin: 0 auto;
-  height: 70vh;
+  height: 80vh;
   position: relative; 
   display: block;
   margin: 0 auto;
@@ -22,7 +22,7 @@
 
 
 #HomeImageSmall, #HomeImageWide  {
-  height: 75vh;
+  height: 82vh;
   width: 100%;
   position: relative;
   display: block;
@@ -82,7 +82,7 @@ h1 {
   max-width: 400px;
   text-transform: uppercase;
   position: relative;
-  bottom: 220px;
+  bottom: 30vh;
   margin: 0 auto;
   z-index: 5;
   cursor: pointer;
@@ -145,14 +145,14 @@ h1 {
 
 @media only screen and (max-width: 900px) {
   #startButton {
-    bottom: 220px;
+    bottom: 30vh;
     /* height: 50px; */
   }
 }
 
 @media only screen and (min-width: 900px) {
   #startButton {
-    bottom: 200px;
+    bottom: 30vh;
   }
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Home.css';
-import HomeImgWide from './HomeImgWide.png';
-import HomeImgSmall from './HomeImgSmall.png';
+import HomeImgWide from './HomePageImgWide.png';
+import HomeImgSmall from './HomePageImgSmall.png';
 import { useHistory } from "react-router-dom";
 
 

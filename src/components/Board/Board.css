@@ -40,7 +40,7 @@
   height: 200px;
   width: 300px;
   z-index:10;
-  top:200px;
+  top:35vh;
 }
 
 #svgContainer {
@@ -114,7 +114,11 @@
   
 }
 
-
+@media only screen and (max-width: 600px) {
+  #boardButton {
+    font-size: 0.7em;
+  }
+}
 
 
 

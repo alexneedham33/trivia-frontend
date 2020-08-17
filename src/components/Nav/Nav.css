@@ -80,8 +80,8 @@ nav li button {
   background: lightcoral;
 }
 
-/* 
-@media only screen and (max-width: 900px) {
+
+/* @media only screen and (max-width: 900px) {
   #navDiv {
     height: 125px;
   }
@@ -91,11 +91,11 @@ nav li button {
   #navDiv {
     height: 175px;
   }
-}
+} */
 
 
 @media only screen and (max-width: 600px) {
-  #navDiv {
-    height: 100px;
+  nav li a{
+    font-size: 0.8em;
   }
-} */
+} 

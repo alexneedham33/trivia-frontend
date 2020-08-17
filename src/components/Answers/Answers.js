@@ -38,8 +38,11 @@ function submitHandler(e){
 
 function handleAnswerChange(e){
     console.log(e.target.value);
+    e.target.focus();
     setSelectedAnswer(e.target.value);
+
 }
+
 
 
     return (
@@ -58,8 +61,9 @@ function handleAnswerChange(e){
             <button className="responseButton" value={answerD} name= "answer" onClick={handleAnswerChange}>
               D: {answerD}
             </button>
+            <button id="submitButton" name= "answer" onClick={submitHandler} >SUBMIT</button>
             </div>
-             <button id="submitButton" name= "answer" onClick={submitHandler} >SUBMIT</button>
+             {/* <button id="submitButton" name= "answer" onClick={submitHandler} >SUBMIT</button> */}
           </div>
 
   )

@@ -68,7 +68,8 @@
       height: 70vh;
       max-width: 300px;
       display: block;
-      margin: 0 auto
+      margin: 0 auto;
+      border: 1px solid black;
     }
   }
 
@@ -76,7 +77,8 @@
     #boardSvg {
       max-height: 70vh;
       display: block;
-      margin: 0 auto
+      margin: 0 auto;
+      border: 1px solid black;
       /* max-width: 300px; */
     }
   }

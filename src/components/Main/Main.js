@@ -35,7 +35,7 @@ useEffect((question, answers, correctanswer)=>{
 
 
   return (
-    <div>
+    <div id="mainCont">
       <div id="respContainer">
         <Question question = {question} />
         <Answers answers= {answers} correctAnswer = {correctanswer} randAnswerArr= {shuffle} />

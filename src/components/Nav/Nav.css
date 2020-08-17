@@ -6,6 +6,7 @@
   display: block;
   margin:0 auto;
   width: 90vw;
+  height: 15%;
   background-color: lightcyan;
   /* height: 10vh; */
   font-style: italic;
@@ -24,7 +25,7 @@
 /* } */
 
 nav {
-  height: 100px;
+  height: 100%;
   background-color: lightblue;
   border-bottom: 1px solid black;
 }
@@ -48,9 +49,9 @@ nav li a {
   color: black
 }
 
-nav li a:hover {
+/* nav li a:hover {
   color: lightcoral
-}
+} */
 
 nav li button {
   font-weight: bold;
@@ -107,6 +108,12 @@ nav li button {
 
 @media only screen and (max-width: 600px) {
   nav li a{
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+} 
+
+@media only screen and (min-width: 2500px) {
+  nav li a{
+    font-size: 2em;
   }
 } 

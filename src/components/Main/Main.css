@@ -1,9 +1,18 @@
 #respContainer{  
-  height: auto;
+  height: 100%;
   margin: 0px auto;
   width: 90%;
   margin-top: 0px
 }
+
+#mainCont {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: 80%
+}
+
+
 
 /* #AnswerCheck {
   opacity: 0

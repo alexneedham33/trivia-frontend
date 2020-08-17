@@ -2,9 +2,9 @@
 
 
 #boardSvg {
-  height: 530px;
-  max-height: 100%;
-  max-width: 100%;
+  height: 60vh ;
+  max-height: 60vh;
+  max-width: 95%;
   display: block;
   margin: 0px auto;
   z-index: 5;
@@ -22,13 +22,12 @@
   left: 65%;
   top: 75%;
   z-index: 11;
-  height:auto;
-  width:auto;
-  padding:15px 15px;
+  height:70px;
+  width:130px;
   font-weight: bold;
   border-radius: 10px;
   border: 2px black solid;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   background-color:#f2f2f2;
   
 }
@@ -37,19 +36,28 @@
 #bubble {
   position: absolute;
   /* bottom: 300px; */
-  height: 200px;
-  width: 300px;
+  height: 30%;
+  width: auto;
   z-index:10;
-  top:35vh;
+  top:55%;
+  left: 15%;
+  
 }
 
+#innerSvgCont {
+  position: relative;
+  
+}
+
+
 #svgContainer {
-  top: 30px;
+  top: 5%;
   width: 100%;
-  height: 70vh;
+  height: 80%;
   margin: 0px auto;
   display: block;
   position: relative;
+  /* padding-bottom: 10%; */
 }
 
 #boardButton:hover, #boardButton:focus {
@@ -57,21 +65,20 @@
   }
   
 
-
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1500px) {
   #bubble {
-    left: 50px;
+    height: 350px;
+    width: 500px;
   }
 }
 
-@media only screen and (min-width: 1100px) {
+
+@media only screen and (min-width: 3000px) {
   #bubble {
-    left: 120px;
-    height: 230px;
-    width: 350px;
+    height: 500px;
+    width: 750px;
   }
 }
-
 
 @-webkit-keyframes pulse{
   0%{
@@ -117,9 +124,17 @@
 @media only screen and (max-width: 600px) {
   #boardButton {
     font-size: 0.7em;
+    width: 100px;
+    height: 50px
   }
 }
-
+@media only screen and (min-width: 1500px) {
+  #boardButton {
+    font-size: 1em;
+    width: 150px;
+    height: 100px
+  }
+}
 
 
 

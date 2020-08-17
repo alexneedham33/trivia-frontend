@@ -28,10 +28,13 @@ function Wheel({item}) {
   return (
     <div id="wheelContainer">
       <h1 id="selectTxt">SELECT A CATEGORY BELOW.</h1>
+
       <button id="spinBtn" onClick={toggleAnimation}>
-        CLICK TO SPIN!
-      </button>
-      <svg id="svgWheel" viewBox="0 0 300 300">
+          CLICK TO SPIN!
+        </button>
+        <div id="innerWheelCont"> 
+        
+        <svg id="svgWheel" viewBox="0 0 300 300">
         <path
           fill="#e6e6e6"
           paintOrder="markers fill stroke"
@@ -115,6 +118,7 @@ function Wheel({item}) {
           paintOrder="markers stroke fill"
         />
       </svg>
+      </div>
       <div id="instruction">
         <h1 id="wheelh1Txt">You selected the category: </h1>
         <br></br>

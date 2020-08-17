@@ -65,16 +65,17 @@ a {
 
 
 #svgWheel {
-  border:3px solid black;
+  /* border:3px solid black; */
   border-radius: 33px;
-  width: 95%;
   z-index: -1;
   position: relative;
-  max-width: 500px;
-  max-height: 500px;
+  width: auto;
+  /* max-width: 500px; */
+  max-height: 1500px;
   animation-name: blur-img;
   display: block;
   margin: 0px auto;
+  height: 90%
   
 
 }
@@ -85,24 +86,22 @@ a {
   #spinBtn {
     -webkit-animation: pulse 2.5s linear infinite;
             animation: pulse 2.5s linear infinite; 
-    width:250px;;
-    height: 80px;
+    padding: 5px 5px;
+    display: block;
+    margin: 0 auto;
     font-weight: bold;
-    font-size:1.1rem;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:#f2f2f2;
     border: 5px solid grey;
     border-radius: 100px;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    left: 50%;
-    bottom: 20vh;
-    display: block;
+    position: relative;
     min-width: 100px;
     cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 1em;
+    width: 30%;
+    height: 50px;
   }
 
   #spinBtn:hover {
@@ -122,8 +121,18 @@ a {
   position: relative;
   display: block;
   top:5vh;
-  /* bottom: 20px; */
+  padding-bottom: 10%;
+  height:80%
 
+}
+
+#innerWheelCont {
+  /* width: 75%; */
+  flex-direction: column;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  height: 80%
 }
 
 #selectTxt {
@@ -131,11 +140,11 @@ a {
   padding: 20px 20px;
   margin-bottom: 200px;
   display: block;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   font-size: 1.2em;
   background-color: whitesmoke;
-  margin-bottom: 40px;
+  margin-bottom: 5vh;
   border: 1px solid grey;
 }
 
@@ -268,23 +277,66 @@ a {
 }
 
 
-@media only screen and (min-width: 1100px) {
-  #spinBtn {
-    bottom: 20vh;
+
+
+@media only screen and (min-width: 2500px){
+  #svgWheel{
+    height: 1000px;
+    width: 1000px;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  #spinBtn {
-    bottom: 20vh;
+@media only screen and (min-width: 550px) and (max-width: 800px)  {
+  #svgWheel{
+    height: 400px;
+    width: 400px;
   }
 }
-@media only screen and (max-width: 450px) {
-  #spinBtn {
-    bottom: 15vh;
 
+
+@media only screen and (max-width: 550px) {
+  #svgWheel{
+    height: 250px;
+    width: 250px;
   }
 }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  #selectTxt{
+    font-size: 0.9em;
+    width:80%
+  }
+}
+
+/* Spin button */
+
+/* @media only screen and (min-width: 551px) and (max-width: 2500px)  {
+  #spinBtn{
+    font-size: 1em;
+    width: 50px;
+    height: 200px;
+    /* height: 500px; */
+    
+  /* }
+}; */ 
+
+@media only screen and (max-width: 550px) {
+  #spinBtn{
+    font-size: 0.7em;
+    width: 50%;
+    height: 50px;
+  }
+};
+
+
 
 
 

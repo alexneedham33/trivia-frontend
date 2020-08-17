@@ -10,11 +10,10 @@ function Contact() {
   return (
     <div id="contactMainDiv">
       <div id="contactInnerDiv">
-        <div>{generalInfo}</div>
-        <br/><br/>
+        <p>{generalInfo} </p>
         <ul>
-          <li><strong><em>Game Designer:</em></strong>  --- Valeria Mota Monzon <br/><br/><strong><em>About:</em></strong>{valeriaAbout}<br/><br/><strong><em> Email:</em></strong>--- motamonzonv@gmail.com <br/><br/><a href='https://www.linkedin.com/in/valeria-mota-monz%C3%B3n-165594145/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
-          <li><strong><em>Game Developer:</em></strong> --- Alexander Needham <br/><br/><strong><em> About:</em></strong>{alexAbout}<br/><br/><strong><em>Email:</em></strong> --- alexneedham33@gmail.com <br/><br/><a href='https://www.linkedin.com/in/alexander-needham-925851169/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
+          <li><strong><em>Game Designer:</em></strong>  --- Valeria Mota Monzon <br/><strong><em>About:</em></strong><p>{valeriaAbout}</p><br/><strong><em> Email:</em></strong>--- motamonzonv@gmail.com <br/><a href='https://www.linkedin.com/in/valeria-mota-monz%C3%B3n-165594145/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
+          <li><strong><em>Game Developer:</em></strong> --- Alexander Needham <br/><strong><em> About:</em></strong><p>{alexAbout}</p><br/><strong><em>Email:</em></strong> --- alexneedham33@gmail.com <br/><a href='https://www.linkedin.com/in/alexander-needham-925851169/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
         </ul>
       </div>
       <footer>

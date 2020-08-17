@@ -10,12 +10,19 @@
 }
 
 #contactInnerDiv {
-  padding-top: 30px;
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-  position: relative;
+    padding: 5px;
+    background-color: lightcyan;
+    padding-top: 30px;
+    /* width: 90%; */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid black;
   
+}
+
+p {
+  font-size: 0.8em;
 }
 
 #contactInnerDiv ul {
@@ -24,7 +31,7 @@
 
 #contactInnerDiv ul li {
   margin-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
  }
 
  #copyRightText {

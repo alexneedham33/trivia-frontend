@@ -3,17 +3,16 @@ import './Contact.css';
 
 function Contact() {
 
-  const alexAbout = "  Alex has previously worked as a data analyst/statistician and now pursues his strong interest towards coding and web development."
-  const valeriaAbout = " Valeria's field is tourism, she has always worked in the service industry. One of her greatest passions is promoting her country. "
-  const generalInfo = " This game was designed by Valeria before graduating from University, and now it's brought to life thanks to Alex. Our intention is to provide a fun and educational way to learn more about Mexico, and of course, invite you all to go explore."
+  const generalInfo = " This game was designed by Valeria during her masters course with the intention of providing a fun and educational way to learn more about Mexico. Valeria's field is tourism and she has always worked in the service industry. One of her greatest passions is promoting her country. The game was coded online by Alex who is a full stack developer pursuing his strong interest towards coding and web development. We hope you enjoy the game and please feel free to contact us both."
 
   return (
     <div id="contactMainDiv">
       <div id="contactInnerDiv">
         <p>{generalInfo} </p>
         <ul>
-          <li><strong><em>Game Designer:</em></strong>  --- Valeria Mota Monzon <br/><strong><em>About:</em></strong><p>{valeriaAbout}</p><br/><strong><em> Email:</em></strong>--- motamonzonv@gmail.com <br/><a href='https://www.linkedin.com/in/valeria-mota-monz%C3%B3n-165594145/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
-          <li><strong><em>Game Developer:</em></strong> --- Alexander Needham <br/><strong><em> About:</em></strong><p>{alexAbout}</p><br/><strong><em>Email:</em></strong> --- alexneedham33@gmail.com <br/><a href='https://www.linkedin.com/in/alexander-needham-925851169/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
+          <br/>
+          <li><strong><em>Game Designer:</em></strong>  --- Valeria Mota Monzon <br/><br/><strong><em> Email:</em></strong>--- motamonzonv@gmail.com <br/><a href='https://www.linkedin.com/in/valeria-mota-monz%C3%B3n-165594145/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
+          <li><strong><em>Game Developer:</em></strong> --- Alexander Needham <br/><br/><strong><em>Email:</em></strong> --- alexneedham33@gmail.com <br/><a href='https://www.linkedin.com/in/alexander-needham-925851169/' target="_blank" rel="noopener noreferrer"><em>LinkedIn</em></a></li>
         </ul>
       </div>
       <footer>

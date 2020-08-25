@@ -8,9 +8,9 @@ function MainProvider(props) {
   const [attempts, setAttempts] = useState(0);
 
 
-  console.log("does this keep rendering?");
+  //console.log("does this keep rendering?");
   // console.log(correctAnswerCount)
-  console.log(attempts);
+  //console.log(attempts);
 
   const stateOptions = [
     [correctAnswerCount, setCorrectAnswerCount],

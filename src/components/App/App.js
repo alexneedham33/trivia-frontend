@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
 import Home from "../Home/Home";
@@ -10,8 +10,8 @@ import Winner from "../Winner/Winner.js";
 import Nav from "../Nav/Nav.js";
 import Contact from "../Contact/Contact.js";
 
-
 function App() {
+  const [degNumIndex, setDegNumIndex] = useState(0);
   // useEffect(() => {
   //   if (window.performance) {
   //     if (performance.navigation.type === 1) {
@@ -32,8 +32,30 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/Contact" component={Contact} />
       <Route exact path="/Board" component={Board} />
-      <Route exact path="/Wheel" component={Wheel} />
-      <Route path="/Question" component={Main} />
+      <Route
+        exact
+        path="/Wheel"
+        render={(props) => {
+          return (
+            <Wheel
+              {...props}
+              degNumIndex={degNumIndex}
+              setDegNumIndex={setDegNumIndex}
+            />
+          );
+        }}
+      />
+      <Route
+        path="/Question"
+        render={(props) => {
+          return (
+            <Main
+              {...props}
+              degNumIndex={degNumIndex}
+            />
+          );
+        }}
+      />
       <Route path="/Endpage" component={Winner} />
     </MainProvider>
   );

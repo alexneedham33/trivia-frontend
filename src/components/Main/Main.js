@@ -7,7 +7,7 @@ import { getData } from '../../utilities/utilities';
 import { Link } from 'react-router-dom';
 import '../Answers/Answers.css'
 
-function Main(props) {
+function Main({degNumIndex}) {
 
 //Setting local state
 const [question, setQuestion] = useState('');
@@ -22,7 +22,8 @@ let array = ['0', '1', '2', '3'];
  console.log(shuffle);
 
 useEffect((question, answers, correctanswer)=>{
-      getData().then(
+  console.log("degNum main", degNumIndex)
+      getData(degNumIndex).then(
         res=> {
           setQuestion(res.data.title);
           setAnswers([res.data.correctanswer, res.data.answer2, res.data.answer3, res.data.answer4]);

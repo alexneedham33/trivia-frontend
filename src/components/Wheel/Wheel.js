@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Wheel.css";
 
-export let degNumIndex;
+function Wheel({degNumIndex, setDegNumIndex}) {
+  const [degString, setDegString] = useState("");
 
-function Wheel({item}) {
-  // let durNum = Math.floor(5 + Math.random() * 5); //random duration
-  let durString = '5s'
-  let degNum = Math.floor(Math.random() * 360); // random
-  degNumIndex = Math.floor(degNum / 72);
+  useEffect(() => {
+    let degNum = Math.floor(Math.random() * 360); // random
+    const degNumIndexValue = Math.floor(degNum / 72);
+    let offSetDegNum = 1800 + degNum;
+    const degStringValue = offSetDegNum + "deg";
+
+    setDegNumIndex(degNumIndexValue);
+    setDegString(degStringValue);
+  }, [])
+
   let catList = ["North ", "Central ", "Southern", "Pacific", "General"];
-  let categoryString = catList[degNumIndex];
-  console.log(categoryString);
-  let offSetDegNum = 1800 + degNum;
-  let degString = offSetDegNum + "deg";
-  console.log(degString);
 
-
-  function toggleAnimation() {
+  function toggleAnimation(degValue) {
     document.getElementById("spinBtn").style.setProperty("display", "none");
     document.getElementById("wheelContainer").style.setProperty("--playState", "running");
-    document.getElementById("wheelContainer").style.setProperty("--dur", durString);
-    document.getElementById("wheelContainer").style.setProperty("--deg", degString);
+    document.getElementById("wheelContainer").style.setProperty("--dur", '5s');
+    document.getElementById("wheelContainer").style.setProperty("--deg", degValue);
     document.getElementById("instruction").classList.add("instructionSlide");
   }
 
@@ -29,7 +29,7 @@ function Wheel({item}) {
     <div id="wheelContainer">
       <h1 id="selectTxt">SELECT A CATEGORY BELOW.</h1>
 
-      <button id="spinBtn" onClick={toggleAnimation}>
+      <button id="spinBtn" onClick={() => toggleAnimation(degString)}>
           CLICK TO SPIN!
         </button>
         <div id="innerWheelCont"> 

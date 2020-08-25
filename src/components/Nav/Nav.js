@@ -27,7 +27,7 @@ function Nav() {
           <li><Link to='/Contact'>About / Contact</Link></li>
           <li id="audioli">
                 {!toggleAudio ? <img onclick={handleAudio} id="audioOn" src={audioOn} alt="toggle audio on" onClick={handleAudio}
-                   /> : <img onclick={handleAudio} id="audioOff" src={audioOff} alt="toggle audio off" onClick={handleAudio}/>}
+                   /> : <img onClick={handleAudio} id="audioOff" src={audioOff} alt="toggle audio off" onClick={handleAudio}/>}
           </li>
         </ul>
       </nav>

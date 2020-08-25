@@ -1,9 +1,6 @@
 import axios from "axios";
-import { degNumIndex } from "../components/Wheel/Wheel.js";
 
-console.log(degNumIndex);
-
-export const getData = () => {
+export const getData = (degNumIndex) => {
   const responseEnglish = axios.get(
     `${process.env.REACT_APP_API_URL}/${degNumIndex}/`
   );

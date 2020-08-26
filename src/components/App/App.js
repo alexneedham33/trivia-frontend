@@ -11,7 +11,12 @@ import Nav from "../Nav/Nav.js";
 import Contact from "../Contact/Contact.js";
 
 function App() {
-  const [degNumIndex, setDegNumIndex] = useState(0);
+  // const [degNumIndex, setDegNumIndex] = useState(0);
+  const [question, setQuestion] = useState('');
+  const [answers, setAnswers] = useState([]);
+  const [correctanswer, setCorrectAnswer] = useState('');
+  
+  
   // useEffect(() => {
   //   if (window.performance) {
   //     if (performance.navigation.type === 1) {
@@ -32,15 +37,9 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/Contact" component={Contact} />
       <Route exact path="/Board" component={Board} />
-      <Route
-        exact
-        path="/Wheel"
-        render={(props) => {
+      <Route exact path="/Wheel" render={(props) => {
           return (
-            <Wheel
-              {...props}
-              degNumIndex={degNumIndex}
-              setDegNumIndex={setDegNumIndex}
+            <Wheel {...props} question={question} setQuestion={setQuestion} answers={answers} setAnswers={setAnswers} correctanswer={correctanswer} setCorrectAnswer={setCorrectAnswer}
             />
           );
         }}
@@ -50,8 +49,8 @@ function App() {
         render={(props) => {
           return (
             <Main
-              {...props}
-              degNumIndex={degNumIndex}
+              {...props} question={question} answers={answers} correctanswer={correctanswer}
+              // degNumIndex={degNumIndex}
             />
           );
         }}

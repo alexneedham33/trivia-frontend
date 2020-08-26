@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Wheel.css";
+import { getData } from '../../utilities/utilities';
 
-function Wheel({degNumIndex, setDegNumIndex}) {
-  const [degString, setDegString] = useState("");
+function Wheel(props) {
+  // const [degString, setDegString] = useState("");
 
-  useEffect(() => {
     let degNum = Math.floor(Math.random() * 360); // random
     const degNumIndexValue = Math.floor(degNum / 72);
     let offSetDegNum = 1800 + degNum;
     const degStringValue = offSetDegNum + "deg";
 
-    setDegNumIndex(degNumIndexValue);
-    setDegString(degStringValue);
+  useEffect(() => {
+    getData(degNumIndexValue).then(
+      res=> {
+        props.setQuestion(res.data.title);
+        props.setAnswers([res.data.correctanswer, res.data.answer2, res.data.answer3, res.data.answer4]);
+        props.setCorrectAnswer(res.data.correctanswer);
+        console.log('Axios request sent', res);
+      }
+    ) 
+    // setDegNumIndex(degNumIndexValue);
+    // setDegString(degStringValue);
   }, [])
 
   let catList = ["North ", "Central ", "Southern", "Pacific", "General"];
@@ -29,7 +38,7 @@ function Wheel({degNumIndex, setDegNumIndex}) {
     <div id="wheelContainer">
       <h1 id="selectTxt">SELECT A CATEGORY BELOW.</h1>
 
-      <button id="spinBtn" onClick={() => toggleAnimation(degString)}>
+      <button id="spinBtn" onClick={() => toggleAnimation(degStringValue)}>
           CLICK TO SPIN!
         </button>
         <div id="innerWheelCont"> 
@@ -122,7 +131,7 @@ function Wheel({degNumIndex, setDegNumIndex}) {
       <div id="instruction">
         <h1 id="wheelh1Txt">You selected the category: </h1>
         <br></br>
-        <h1 id="spanText">--- {catList[degNumIndex]} ---</h1>
+        <h1 id="spanText">--- {catList[degNumIndexValue]} ---</h1>
         <br />
           <Link to= "/Question">
             <button id="questionButton">Get Question!</button>

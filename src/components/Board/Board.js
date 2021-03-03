@@ -57,7 +57,7 @@ function Board() {
     <div id="svgContainer">
       <div id="innerSvgCont">
         <button id="boardButton" onClick={boardClick}>CLICK HERE!</button>
-          {attempts===0 && <img id="bubble" src={Bubble} alt="motivational text" /> }
+          
           {isDesktop ? <SmallBoard /> : <MediumBoard />}
       </div> 
        {/* <div id="testDiv"></div> */}
